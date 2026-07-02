@@ -1,6 +1,20 @@
 Mahjong Betting Game
 A web-based Mahjong-inspired betting game built with React. The project focuses on state management, game logic separation, and scalable architecture for future feature expansion.
 
+AI Assistance Clarification
+
+During development, AI tools were used as a support mechanism to assist with debugging and structuring parts of the game logic, particularly the playTurn function.
+
+The AI helped in:
+
+Identifying and fixing runtime and state-related issues during development
+Suggesting a clearer order of operations inside the game loop (game flow structure)
+Assisting in organizing the logic flow (bet evaluation, state updates, reshuffling, and scoring)
+
+However, the implementation of playTurn, including its logic design, integration with the game state, and rule behavior, was fully understood, reviewed, and adapted manually to fit the project requirements.
+
+AI was used as a guidance tool to improve development speed and code structure, not as a replacement for understanding or design decisions.
+
 Features
 * Mahjong tile-based gameplay (Dragons, Winds, Number tiles)
 * Betting system: Bet Higher / Bet Lower
