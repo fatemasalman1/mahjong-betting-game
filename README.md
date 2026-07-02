@@ -1,18 +1,70 @@
-# React + Vite
+Mahjong Betting Game
+A web-based Mahjong-inspired betting game built with React. The project focuses on state management, game logic separation, and scalable architecture for future feature expansion.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+* Mahjong tile-based gameplay (Dragons, Winds, Number tiles)
+* Betting system: Bet Higher / Bet Lower
+* Dynamic scoring system
+* Deck reshuffling system
+* Game history tracking
+* Game Over conditions
+* Local leaderboard (Top scores)
 
-Currently, two official plugins are available:
+Game Rules
+Tile Values
+* Number tiles → equal face value
+* Dragon / Wind tiles → start at value 5
+Dynamic Scaling
+* If a non-number tile is part of a winning hand → +1 value
+* If part of a losing hand → -1 value
+Game Over Conditions
+* Any Dragon/Wind tile reaches 0 or 10
+* Deck reshuffled 3 times
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Architecture Overview
+The project is structured for scalability and future extensions.
+Core Modules
+* engine.js → Main game logic (playTurn, game flow)
+* deck.js → Deck creation, shuffle, and drawing hands
+* rules.js → Scoring logic and tile rules
+* scoringEngine.js → Hand total calculation
+Design Principle
+UI is fully separated from game logic. Game state is managed through a predictable engine system.
+This makes it easy to:
+* Add new tile types
+* Introduce new betting rules
+* Extend game mechanics without changing UI
 
-## React Compiler
+Tech Stack
+* React
+* JavaScript (ES6+)
+* Tailwind CSS
+* shadcn/ui components
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+How to Run
+npm install
+npm run dev
 
-Note: This will impact Vite dev & build performances.
+What was implemented manually vs AI-assisted
+Manually built
+* Game logic (engine, rules, deck system)
+* State management
+* UI structure and layout
+* Game flow design
+AI-assisted
+* UI polishing suggestions
+* Refactoring ideas
+* Documentation structure
 
-## Expanding the ESLint configuration
+Future Improvements
+* Add multiplayer mode
+* Add animations for tile movement
+* Add persistent backend leaderboard
+* Add special tile abilities (wild cards, multipliers)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Notes
+This project was designed as a technical assessment focusing on:
+* Clean architecture
+* Extendable logic
+* UI clarity
+* Game state predictability
